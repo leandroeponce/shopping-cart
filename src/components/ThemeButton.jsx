@@ -10,9 +10,9 @@ const ThemeButton = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="fixed top-4 left-4 flex bg-gray-300 dark:bg-gray-700 text-black dark:text-white px-4 py-2 rounded hover:cursor-pointer"
+      className="bg-gray-300 dark:bg-gray-700 text-black dark:text-white  px-4 py-2 rounded hover:cursor-pointer"
     >
-      {theme === "light" ? <LuMoon /> : <LuSun />}
+      {theme === "light" ? <LuMoon size={20}/> : <LuSun size={20}/>}
     </button>
   );
 }; 

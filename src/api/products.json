@@ -1,17 +1,68 @@
 [
-    { 
+    {
         "id": 1,
-        "name": "Laptop",
-        "price": 1000 
+        "name": "Auriculares Logitech G733", 
+        "price": 282300,
+        "img": "Imagen_01"
     },
     { 
         "id": 2, 
-        "name": "Auriculares", 
-        "price": 200 
+        "name": "Mouse ASUS ROG", 
+        "price": 148500,
+        "img": "Imagen_02"
     },
     { 
         "id": 3, 
-        "name": "Mouse", 
-        "price": 50 
+        "name": "Teclado Mecánico Redragon Horus", 
+        "price": 81500,
+        "img": "Imagen_03"
+    },
+    { 
+        "id": 4, 
+        "name": "Silla Gamer Vertagear", 
+        "price": 453000,
+        "img": "Imagen_04"
+    },
+    { 
+        "id": 5, 
+        "name": "Micrófono JBL Quantum", 
+        "price": 254400,
+        "img": "Imagen_05"
+    },
+    { 
+        "id": 6, 
+        "name": "Mouse Pad ASUS ROG", 
+        "price": 128900,
+        "img": "Imagen_06"
+    },
+    { 
+        "id": 7, 
+        "name": "Auriculares Bluetooth JBL", 
+        "price": 121000,
+        "img": "Imagen_07"
+    },
+    { 
+        "id": 8, 
+        "name": "Mouse Redragon Cobra", 
+        "price": 121000,
+        "img": "Imagen_08"
+    },
+    { 
+        "id": 9, 
+        "name": "Teclado Redragon Mitra", 
+        "price": 59200,
+        "img": "Imagen_09"
+    },
+    { 
+        "id": 10, 
+        "name": "Silla Gamer Noblechair", 
+        "price": 622300,
+        "img": "Imagen_10"
+    },
+    { 
+        "id": 11, 
+        "name": "Micrófono Logitech Blue Yeti", 
+        "price": 111400,
+        "img": "Imagen_11"
     }
 ]

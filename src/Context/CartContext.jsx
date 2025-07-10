@@ -27,7 +27,7 @@ export const CartProvider = ({ children }) => {
         setCart((prevCart) => prevCart.filter((product) => product.id !== id))
     }
 
-    const updateQuatity = (id, quantity) => {
+    const updateQuantity = (id, quantity) => {
         setCart((prevCart) =>
             prevCart.map((product) => 
                 product.id === id ? { ...product, quantity: Math.max(1, quantity)} : product
@@ -37,7 +37,7 @@ export const CartProvider = ({ children }) => {
     const totalPrice = cart.reduce((total, product) => total + product.price * product.quantity, 0)
 
     return (
-        <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateQuatity, totalPrice}}>
+        <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateQuantity, totalPrice}}>
             {children}
         </CartContext.Provider>
     )
