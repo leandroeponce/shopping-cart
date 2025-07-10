@@ -4,12 +4,15 @@ import './index.css'
 import App from './App.jsx'
 import { ThemeProvider } from './Context/ThemeContext.jsx'
 import { CartProvider } from './Context/CartContext.jsx'
+import { CartModalProvider } from './Context/CartModalContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ThemeProvider >
       <CartProvider >
-        <App />
+        <CartModalProvider >
+          <App />
+        </CartModalProvider >
       </CartProvider>
     </ThemeProvider>
   </StrictMode>

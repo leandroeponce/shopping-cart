@@ -1,20 +1,22 @@
 import { useContext } from "react";
 import { CartContext } from "../Context/CartContext";
+import { useCartModal } from "../Context/CartModalContext";
 
-const CartModal = ({ isOpen, onClose }) => {
+const CartModal = () => {
+  const { isCartOpen, closeCart } = useCartModal(); 
   const { cart, removeFromCart, updateQuantity, totalPrice } = useContext(CartContext);
 
-  if (!isOpen) return null;
+  if (!isCartOpen) return null; 
 
   return (
     <div className="fixed inset-0 bg-black/60 flex items-center justify-center">
       <div className="bg-white dark:bg-gray-800 p-6 rounded-lg w-full max-w-lg shadow-lg relative">
-        <button onClick={onClose} className="absolute top-2 right-2 text-red-500 text-xl font-bold hover:cursor-pointer">
+        <button onClick={closeCart} className="absolute top-2 right-2 text-red-500 text-xl font-bold hover:cursor-pointer">
           ×
         </button>
         <h2 className="text-xl font-bold mb-4 text-center">🛒 Cart</h2>
         {cart.length === 0 ? (
-          <p className="text-center text-gray-600 dark:text-gray-300">Your Cart is emply.</p>
+          <p className="text-center text-gray-600 dark:text-gray-300">Your Cart is empty.</p>
         ) : (
           cart.map((product) => (
             <div key={product.id} className="flex justify-between items-center bg-gray-100 dark:bg-gray-700 p-3 mb-2 rounded">
@@ -40,3 +42,4 @@ const CartModal = ({ isOpen, onClose }) => {
 };
 
 export default CartModal;
+

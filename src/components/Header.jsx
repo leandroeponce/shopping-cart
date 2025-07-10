@@ -1,7 +1,9 @@
+import { useCartModal } from "../Context/CartModalContext"
 import CartButton from "./CartButton"
 import ThemeButton from "./ThemeButton"
 
-const Header = ({ onClose }) => {
+const Header = () => {
+    const { toggleCart } = useCartModal()
 
     return (
         <>
@@ -10,7 +12,7 @@ const Header = ({ onClose }) => {
                 <p className="font-bold text-2xl">GAMING HOUSE</p>
             </a>
             <div className="flex  gap-2">
-                <CartButton onClick={onClose}/>
+                <CartButton onClick={toggleCart}/>
                 <ThemeButton />
             </div>
         </header>
